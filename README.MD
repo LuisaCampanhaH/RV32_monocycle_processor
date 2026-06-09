@@ -1,24 +1,5 @@
 # 🖥️ Processador RV32I Monociclo - Documentação Completa
 
----
-
-## 📋 **Sumário**
-1. [Visão Geral](#visão-geral)
-2. [Arquitetura do Sistema](#arquitetura-do-sistema)
-3. [Estrutura do Projeto](#estrutura-do-projeto)
-4. [Descrição dos Módulos](#descrição-dos-módulos)
-5. [Instruções Suportadas](#instruções-suportadas)
-6. [Sinais de Controle](#sinais-de-controle)
-7. [Formato das Instruções](#formato-das-instruções)
-8. [Diagrama de Blocos](#diagrama-de-blocos)
-9. [Programa de Teste](#programa-de-teste)
-10. [Guia de Compilação e Simulação](#guia-de-compilação-e-simulação)
-11. [Resultados Esperados](#resultados-esperados)
-12. [Critérios de Avaliação](#critérios-de-avaliação)
-13. [Solução de Problemas](#solução-de-problemas)
-14. [Referências](#referências)
-
----
 
 ## 🎯 **Visão Geral**
 
