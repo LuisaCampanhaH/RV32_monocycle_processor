@@ -3,7 +3,6 @@
 
 ## 🎯 **Visão Geral**
 
-### Objetivo
 Implementação de um processador RISC-V de 32 bits (RV32I) com arquitetura **monociclo** (single-cycle), onde cada instrução é executada em exatamente **um ciclo de clock**.
 
 ### Características Principais
