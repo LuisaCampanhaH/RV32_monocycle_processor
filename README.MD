@@ -6,7 +6,7 @@
 Implementação de um processador RISC-V de 32 bits (RV32I) com arquitetura **monociclo** (single-cycle), onde cada instrução é executada em exatamente **um ciclo de clock**.
 
 ### Características Principais
-- ✅ ISA RV32I completa (30 instruções)
+-  ISA RV32I completa (30 instruções)
 
 ### Especificações Técnicas
 | Característica | Valor |
