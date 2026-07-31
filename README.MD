@@ -1,26 +1,56 @@
-# 🖥️ Processador RV32I Monociclo - Documentação Completa
+<h1 align="center">RV32I Monocycle Processor</h1>
 
+<h4 align="center">
+Implementação de um processador RISC-V de 32 bits (RV32I), arquitetura monociclo — cada instrução executa em exatamente um ciclo de clock.
+</h4>
 
-## 🎯 **Visão Geral**
+<p align="center">
+<img alt="Verilog" src="https://img.shields.io/badge/HDL-Verilog-B366F6?style=for-the-badge">
+<img alt="RISC-V" src="https://img.shields.io/badge/ISA-RV32I-000000?style=for-the-badge">
+<img alt="Coverage" src="https://img.shields.io/badge/Instruções-30%2F30-2ea44f?style=for-the-badge">
+<img alt="License" src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge">
+</p>
 
-Implementação de um processador RISC-V de 32 bits (RV32I) com arquitetura **monociclo** (single-cycle), onde cada instrução é executada em exatamente **um ciclo de clock**.
+<p align="center">
+<a href="#-visão-geral">Visão Geral</a> •
+<a href="#-datapath">Datapath</a> •
+<a href="#-arquitetura-do-sistema">Arquitetura</a> •
+<a href="#-guia-de-compilação-e-simulação">Como Simular</a> •
+<a href="#-documentação-técnica-completa">Documentação Completa</a>
+</p>
 
-### Características Principais
--  ISA RV32I completa (30 instruções)
+---
+
+## 🎯 Visão Geral
+
+Processador RISC-V RV32I completo, implementado do zero em Verilog com arquitetura **monociclo (single-cycle)**: cada instrução — busca, decodificação, execução, acesso à memória e escrita de volta — é resolvida em uma única borda de clock, sem pipeline.
+
+Cobre as **30 instruções da ISA RV32I** (aritmética, lógica, load/store, branch e jump), com testbench próprio validando cada uma.
 
 ### Especificações Técnicas
+
 | Característica | Valor |
-|----------------|-------|
+|---|---|
 | Arquitetura | RISC-V RV32I |
 | Tipo | Monociclo (Single-Cycle) |
-| Barramento de dados | 32 bits |
-| Barramento de endereços | 32 bits |
+| Barramento de dados / endereços | 32 bits |
 | Registradores | 32 (x0 a x31) |
 | Memória de instruções | 256 palavras (1 KB) |
 | Memória de dados | 256 palavras (1 KB) |
-| Clock | Única fase, borda de subida |
+| Clock | Fase única, borda de subida |
+
+## 🖼️ Datapath
+
+<p align="center">
+  <img src="./assets/datapath.svg" alt="Datapath do processador RV32I monociclo" width="900">
+</p>
+
+<p align="center"><i>Caminho de dados completo: IF → ID → EX → MEM → WB, com realimentação de write-back para o Register File e de branch/jump para o PC.</i></p>
+
 
 ---
+
+## 📚 Documentação Técnica Completa
 
 ## 🏗️ **Arquitetura do Sistema**
 
@@ -869,3 +899,9 @@ projeto_rv32i/
 **Tempo estimado de simulação**: ~50 ciclos de clock (500 ns @ 100 MHz)
 
 
+
+---
+
+<p align="center">
+Built by <a href="https://github.com/LuisaCampanhaH">Luisa Campanha</a>
+</p>
