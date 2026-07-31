@@ -1,0 +1,96 @@
+<svg viewBox="0 0 1180 620" xmlns="http://www.w3.org/2000/svg" font-family="JetBrains Mono, monospace">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#4a5568"/>
+    </marker>
+  </defs>
+
+  <rect width="1180" height="620" fill="#0d1117"/>
+
+  <!-- Stage headers -->
+  <g font-size="13" fill="#d4af37" font-weight="bold">
+    <text x="60" y="30">IF — Fetch</text>
+    <text x="290" y="30">ID — Decode</text>
+    <text x="560" y="30">EX — Execute</text>
+    <text x="800" y="30">MEM — Memory</text>
+    <text x="1000" y="30">WB — Write Back</text>
+  </g>
+
+  <!-- Stage separators -->
+  <g stroke="#2d3a2d" stroke-dasharray="4 4">
+    <line x1="255" y1="10" x2="255" y2="600"/>
+    <line x1="520" y1="10" x2="520" y2="600"/>
+    <line x1="770" y1="10" x2="770" y2="600"/>
+    <line x1="960" y1="10" x2="960" y2="600"/>
+  </g>
+
+  <!-- IF stage -->
+  <rect x="40" y="60" width="150" height="50" rx="6" fill="#12261a" stroke="#3d5c46"/>
+  <text x="115" y="90" text-anchor="middle" fill="#e8e4d9" font-size="13">PC</text>
+
+  <rect x="40" y="150" width="150" height="60" rx="6" fill="#12261a" stroke="#3d5c46"/>
+  <text x="115" y="175" text-anchor="middle" fill="#e8e4d9" font-size="12">Instruction</text>
+  <text x="115" y="192" text-anchor="middle" fill="#e8e4d9" font-size="12">Memory</text>
+
+  <rect x="40" y="250" width="150" height="40" rx="6" fill="#12261a" stroke="#3d5c46"/>
+  <text x="115" y="275" text-anchor="middle" fill="#e8e4d9" font-size="12">PC + 4</text>
+
+  <path d="M115,110 L115,150" stroke="#4a5568" marker-end="url(#arrow)" fill="none"/>
+  <path d="M190,90 L230,90" stroke="#4a5568" marker-end="url(#arrow)" fill="none"/>
+
+  <!-- ID stage -->
+  <rect x="270" y="60" width="160" height="60" rx="6" fill="#12261a" stroke="#3d5c46"/>
+  <text x="350" y="85" text-anchor="middle" fill="#e8e4d9" font-size="12">Register File</text>
+  <text x="350" y="102" text-anchor="middle" fill="#e8e4d9" font-size="11">rs1 / rs2 / rd</text>
+
+  <rect x="270" y="140" width="160" height="50" rx="6" fill="#12261a" stroke="#3d5c46"/>
+  <text x="350" y="170" text-anchor="middle" fill="#e8e4d9" font-size="12">Immediate Gen</text>
+
+  <rect x="270" y="210" width="160" height="60" rx="6" fill="#1a2416" stroke="#d4af37" stroke-width="1.2"/>
+  <text x="350" y="235" text-anchor="middle" fill="#d4af37" font-size="12">Control Unit</text>
+  <text x="350" y="252" text-anchor="middle" fill="#d4af37" font-size="10">(combinacional)</text>
+
+  <path d="M190,175 L255,175 L255,90 L265,90" stroke="#4a5568" marker-end="url(#arrow)" fill="none"/>
+  <path d="M190,175 L255,175 L255,165 L265,165" stroke="#4a5568" marker-end="url(#arrow)" fill="none"/>
+  <path d="M190,175 L255,175 L255,240 L265,240" stroke="#4a5568" marker-end="url(#arrow)" fill="none"/>
+
+  <!-- EX stage -->
+  <rect x="540" y="90" width="150" height="60" rx="6" fill="#12261a" stroke="#3d5c46"/>
+  <text x="615" y="115" text-anchor="middle" fill="#e8e4d9" font-size="12">ALU</text>
+  <text x="615" y="132" text-anchor="middle" fill="#e8e4d9" font-size="11">add · sub · logic</text>
+
+  <rect x="540" y="180" width="150" height="45" rx="6" fill="#12261a" stroke="#3d5c46"/>
+  <text x="615" y="207" text-anchor="middle" fill="#e8e4d9" font-size="11">ALU Control</text>
+
+  <rect x="540" y="250" width="150" height="50" rx="6" fill="#12261a" stroke="#3d5c46"/>
+  <text x="615" y="272" text-anchor="middle" fill="#e8e4d9" font-size="11">Branch Target</text>
+  <text x="615" y="288" text-anchor="middle" fill="#e8e4d9" font-size="10">PC + imm</text>
+
+  <path d="M430,90 L520,90 L520,120 L530,120" stroke="#4a5568" marker-end="url(#arrow)" fill="none"/>
+  <path d="M430,165 L520,165 L520,120 L530,120" stroke="#4a5568" marker-end="url(#arrow)" fill="none"/>
+
+  <!-- MEM stage -->
+  <rect x="790" y="120" width="150" height="70" rx="6" fill="#12261a" stroke="#3d5c46"/>
+  <text x="865" y="148" text-anchor="middle" fill="#e8e4d9" font-size="12">Data Memory</text>
+  <text x="865" y="165" text-anchor="middle" fill="#e8e4d9" font-size="11">LW / SW</text>
+
+  <path d="M690,120 L780,120" stroke="#4a5568" marker-end="url(#arrow)" fill="none"/>
+
+  <!-- WB stage -->
+  <rect x="980" y="120" width="150" height="70" rx="6" fill="#1a2416" stroke="#d4af37" stroke-width="1.2"/>
+  <text x="1055" y="148" text-anchor="middle" fill="#d4af37" font-size="12">Write-Back Mux</text>
+  <text x="1055" y="165" text-anchor="middle" fill="#d4af37" font-size="10">ALU · MEM · PC+4 · LUI</text>
+
+  <path d="M940,155 L970,155" stroke="#4a5568" marker-end="url(#arrow)" fill="none"/>
+
+  <!-- feedback to reg file -->
+  <path d="M1055,190 L1055,420 L350,420 L350,200" stroke="#7fb069" stroke-dasharray="3 3" marker-end="url(#arrow)" fill="none"/>
+  <text x="700" y="435" text-anchor="middle" fill="#7fb069" font-size="11">write_data → rd (write-back para o Register File)</text>
+
+  <!-- branch/jump feedback to PC -->
+  <path d="M615,300 L615,500 L115,500 L115,300" stroke="#7fb069" stroke-dasharray="3 3" marker-end="url(#arrow)" fill="none"/>
+  <text x="365" y="515" text-anchor="middle" fill="#7fb069" font-size="11">branch_target / jump_target → próximo PC</text>
+
+  <!-- footer -->
+  <text x="590" y="580" text-anchor="middle" fill="#8a9a8a" font-size="12">Datapath do RV32I monociclo — cada instrução completa este caminho em 1 ciclo de clock</text>
+</svg>
